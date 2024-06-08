@@ -23,7 +23,7 @@ payload={
     
 }
 body=json.dumps(payload)
-model_id="stability.stable-diffusion-xl-v0"
+model_id="stability.stable-diffusion-xl-v1"
 
 response=bedrock.invoke_model(
     body=body,

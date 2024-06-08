@@ -1,16 +1,16 @@
-import os
-import json
-import sys
 import boto3
+import json
 
-print("imported successfully...")
+prompt = """
 
-prompt="""
+you are a cricket expert now just tell me when Pakistan will win the against Inida?
 
-        you are a cricket expert now just tell me when Pakistan will win the against Inida?
 """
 
+
+
 bedrock=boto3.client(service_name="bedrock-runtime")
+
 
 payload={
     
@@ -33,4 +33,4 @@ response=bedrock.invoke_model(
 
 response_body=json.loads(response.get("body").read())
 response_text=response_body["generation"]
-print(response_text)
+print(response_text

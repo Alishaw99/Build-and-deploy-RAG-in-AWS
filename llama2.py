@@ -3,11 +3,11 @@ import json
 import sys
 import boto3
 
-print("imported successfully...")
+print("impotred successfully...")
 
 prompt="""
 
-        you are a cricket expert now just tell me when Pakistan will win the against Inida?
+        you are a cricket expert now just tell me when RCB will win the IPL?
 """
 
 bedrock=boto3.client(service_name="bedrock-runtime")
