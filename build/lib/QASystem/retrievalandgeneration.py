@@ -1,12 +1,11 @@
 from langchain.chains import RetrievalQA
-from langchain_community.vectorstores import FAISS
-from langchain_community.llms import Bedrock
+from langchain.vectorstores import FAISS
+from langchain.llms.bedrock import Bedrock
 import boto3
 from langchain.prompts import PromptTemplate
 from QASystem.ingestion import get_vector_store
 from QASystem.ingestion import data_ingestion
 from langchain_community.embeddings import BedrockEmbeddings
-from langchain_aws import BedrockLLM
 
 bedrock=boto3.client(service_name="bedrock-runtime")
 bedrock_embeddings=BedrockEmbeddings(model_id="amazon.titan-embed-text-v1",client=bedrock)
